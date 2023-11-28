@@ -1,26 +1,29 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
-export default function Car() {
-  const [marginLeft, setMarginLeft] = useState(-5);
+// create a function that moves the car left or right when pressing down the right and left arrows, add style to flip the car
+export default function Car () {
+  const [marginLeft, setMarginLeft] = useState(-5)
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = e => {
     if (e.key === 'ArrowRight') {
-      setMarginLeft(marginLeft + 5);
+      setMarginLeft(marginLeft + 5)
     }
     if (e.key === 'ArrowLeft') {
-      setMarginLeft(marginLeft - 5);
+      setMarginLeft(marginLeft - 5)
     }
-  };
-  
+  }
 
   return (
     <div
-      id="car"
-      style={{ fontSize: '100px', marginTop: '-50px', marginLeft: `${marginLeft}px` }}
+      style={{
+        fontSize: '100px',
+        marginTop: '-50px',
+        marginLeft: `${marginLeft}px`
+      }}
       onKeyDown={handleKeyDown}
-      tabIndex="0"
+      tabIndex='0'
     >
-      <span className="flipCar">🏎️</span>
+      <span className='flipCar'>🏎️</span>
       <style jsx>{`
         .flipCar {
           transform: scale(-1, 1);
@@ -28,5 +31,5 @@ export default function Car() {
         }
       `}</style>
     </div>
-  );
+  )
 }

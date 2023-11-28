@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+// Create an input that will reflect what you type on the screen
 export default function Mirror() {
   const [text, setText] = useState('');
 

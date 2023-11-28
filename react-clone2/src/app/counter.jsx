@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+// Create a counter that increases by 1 or decresases by 1 when clicking the plus or minus button, style buttons to have a space in between
 export default function Counter() {
   const [count, setCount] = useState(0);
 
