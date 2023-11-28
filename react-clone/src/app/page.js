@@ -1,12 +1,12 @@
 "use client";
 import { useState } from 'react';
 import Image from 'next/image'
-import defaultPlanets from "./lib/planets.jsx"
+import alienPlanets from "./lib/planets.jsx"
 import Divider from './components/divider.jsx';
 
 
 export default function Home() {
-  const [planets, setPlanets] = useState(defaultPlanets);
+  const [planets, setPlanets] = useState(alienPlanets);
   
   
   
