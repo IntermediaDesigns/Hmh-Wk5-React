@@ -22,11 +22,11 @@ export default function Timer() {
     setSeconds(0);
   };
 
-  useEffect(() => {
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [intervalId]);
+  // useEffect(() => {
+  //   return () => {
+  //     clearInterval(intervalId);
+  //   };
+  // }, [intervalId]);
 
   const buttonStyle = {
     marginRight: '5px',
