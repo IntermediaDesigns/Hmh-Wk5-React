@@ -1,7 +1,12 @@
+
 .square {
-border: 1px solid blue;
+
   background-color: blue;
   width: 50px;
   height: 50px;
+}
+
+.imgContainer {
+       margin-top: 25px;
 }
 
