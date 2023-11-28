@@ -82,3 +82,4 @@ const alienPlanets = [
        },
      ];
      
+export default alienPlanets
