@@ -10,8 +10,9 @@ export default function Home() {
     <main>
       <h1>Diary</h1>
       
-      <div>
       <MonthYear/>
+      
+      <div>
       <Days/>
       </div>
       
