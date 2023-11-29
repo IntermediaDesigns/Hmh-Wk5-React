@@ -2,6 +2,16 @@
        font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+       background-image: url('/background.jpg');
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+       height: 100vh;
+       margin: 0;
+       padding: 0;
+}
+
 h1 {
        text-align: center;
 }
@@ -36,9 +46,12 @@ h1 {
 .daysContainer{
        display: flex;
        margin-top: 10px;
-       border: 1px solid red;
+       border: 1px solid rgba(86, 86, 86, 0.426);
+       box-shadow: 0 4px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+       border-radius: 5px;
        height: 300px;
        margin-bottom: 20px;
+       background-color: rgba(255, 255, 255, 0.332);
 }
 
 .form {
@@ -55,15 +68,24 @@ h1 {
        word-wrap: break-word;
        cursor: text;
        resize: vertical;
+       background-color: rgba(255, 255, 255, 0.779);
+       font-weight: 300;
+}
+
+input {
+       border: none;
 }
 
 .submit {
-       border: 2px outset #e3e3e3;
+       border: 1px outset #b3b2b2;
+       box-shadow: 2px 3px 2px 0 rgba(0, 0, 0, 0.211), 1px 3px 1px 1px rgb(0 0 0 / 0.1);
        border-radius: 10px;
        height: 30px;
        padding: 1px 4px 1px 4px;
        width: 90px;
        margin-top: 10px;
+       background-color: rgb(229, 201, 132);
+       font-weight: 500;
 }
 
 /*     Day size
