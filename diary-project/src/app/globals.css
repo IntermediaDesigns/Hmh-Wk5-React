@@ -92,4 +92,7 @@ input {
        width: 108px;
        height: 54px;
        text-size: 16px;
+       background-color: light-gray;
+       border-radius: 5px;
+       border: 1px solid gray;
        */
