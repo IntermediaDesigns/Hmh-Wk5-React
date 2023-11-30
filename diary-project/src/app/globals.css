@@ -7,7 +7,7 @@ body {
        background-size: cover;
        background-position: center;
        background-repeat: no-repeat;
-       height: 100vh;
+       height: 115vh;
        margin: 0;
        padding: 0;
 }
@@ -130,19 +130,21 @@ textarea {
 }
 
 .delete{
+       display: flex;
        margin-right: 10px;
+       text-align: left;
 } 
 
 .break{
        display: block;
        margin-bottom: 10px; 
        font-weight: 700;  
+       text-align: left;
 }
 
-.listEdit {
+.listEdit, ul {
        display: block;
-       
-
+       text-align: left;
 }
 
    
