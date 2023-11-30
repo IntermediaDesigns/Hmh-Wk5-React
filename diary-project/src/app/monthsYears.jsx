@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function MonthYear () {
+export default function MonthYear ({ onMonthChange, onYearChange }) {
   const [months, setMonth] = useState([
     { id: 1, month: 'January' },
     { id: 2, month: 'February' },
@@ -35,28 +35,32 @@ export default function MonthYear () {
   // Function to handle month change
   const handleMonthChange = direction => {
     let newIndex =
-      direction === 'next' ? currentMonthIndex + 1 : currentMonthIndex - 1
+        direction === 'next' ? currentMonthIndex + 1 : currentMonthIndex - 1;
     if (newIndex < 0) {
-      newIndex = months.length - 1
-      handleYearChange('prev')
+        newIndex = months.length - 1;
+        handleYearChange('prev');
     } else if (newIndex >= months.length) {
-      newIndex = 0
-      handleYearChange('next')
+        newIndex = 0;
+        handleYearChange('next');
     }
-    setCurrentMonthIndex(newIndex)
-  }
+    setCurrentMonthIndex(newIndex);
+    onMonthChange && onMonthChange(newIndex);
+};
 
-  // Function to handle year change
-  const handleYearChange = direction => {
+// Function to handle year change
+const handleYearChange = direction => {
     let newIndex =
-      direction === 'next' ? currentYearIndex + 1 : currentYearIndex - 1
+        direction === 'next' ? currentYearIndex + 1 : currentYearIndex - 1;
     if (newIndex < 0) {
-      newIndex = years.length - 1
+        newIndex = years.length - 1;
     } else if (newIndex >= years.length) {
-      newIndex = 0
+        newIndex = 0;
     }
-    setCurrentYearIndex(newIndex)
-  }
+    setCurrentYearIndex(newIndex);
+    onYearChange && onYearChange(years[newIndex].year);
+};
+
+  
 
   return (
     <div className='monthYearContainer'>
