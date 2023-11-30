@@ -112,7 +112,7 @@ textarea {
 
 .entryList{
        display: flex;
-       align-items: center;
+       align-items: flex-start;
        background-color: rgb(231, 231, 231);
        box-shadow: 4px 3px 3px 0 rgb(0 0 0 / 0.1), 0 2px 2px -1px rgba(0, 0, 0, 0.432);
        border-radius: 5px;
@@ -144,6 +144,12 @@ textarea {
 
 .listEdit, ul {
        display: block;
+       text-align: left;
+}
+
+.breakEntry{
+       display: block;
+       margin-bottom: 10px;   
        text-align: left;
 }
 

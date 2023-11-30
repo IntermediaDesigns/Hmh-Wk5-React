@@ -9,7 +9,7 @@ export default function Days() {
   const [inputText, setInputText] = useState('');
   const [listItems, setListItems] = useState([]);
 
-  // Function to generate days for the current month and year
+  // Function to generate days for the current month and year, then stored in the days state variable.
   const generateDays = (date) => {
     let daysArray = [];
     let currentYear = date.getFullYear();
@@ -28,11 +28,13 @@ export default function Days() {
     setDays(daysArray);
   };
 
-  // Call generateDays function on component mount and when currentDate changes
+  // used to call the generateDays function when the component mounts and whenever the currentDate state variable changes.
   useEffect(() => {
     generateDays(currentDate);
   }, [currentDate]);
 
+
+  // handles the event when a day is clicked. If the clicked day is the same as the currently selected day, it clears the selectedDay state variable. Otherwise, it sets the selectedDay state variable to the clicked day and clears the listItems state variable.
   const handleDayClick = (day) => {
     if (selectedDay && selectedDay.toDateString() === day.toDateString()) {
         setSelectedDay(null); // Clear the selected day if it's the same as the clicked day
@@ -42,10 +44,12 @@ export default function Days() {
     }
   };
 
+  // handles the event when the input text changes. It sets the inputText state variable to the current value of the input field.
   const handleInputChange = (e) => {
     setInputText(e.target.value);
   };
 
+  // handles the event when a diary entry is submitted. If a day is selected, it adds the input text to the entries state variable, adds the input text to the listItems state variable, and then clears the inputText, selectedDay, and listItems state variables.
   const handleEntrySubmit = (e) => {
     e.preventDefault();
     if (selectedDay) {
@@ -60,14 +64,16 @@ export default function Days() {
     }
   };
 
-  // Function to delete an entry
+  // Function to delete an entry, It removes the entry for the specified date from the entries state variable.
   const handleDeleteEntry = (date) => {
     const newEntries = {...entries};
     delete newEntries[date];
     setEntries(newEntries);
   };
   
-
+// renders the component. It includes the MonthYear component and a form for submitting diary entries. 
+// maps over the days state variable to render each day, and over the entries state variable to render each diary entry. 
+//The onMonthChange and onYearChange props of the MonthYear component are used to update the currentDate state variable when the month or year is changed.
   return (
     <>
         <MonthYear 
