@@ -1,7 +1,6 @@
 "use client";
 
 import Days from "./days.jsx";
-import DiaryEntry from "./diaryEntry.jsx";
 
 export default function Home() {
   return (
@@ -12,7 +11,6 @@ export default function Home() {
       <Days/>
       </div>
       
-      <DiaryEntry/>
 
     </main>
   )
