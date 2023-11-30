@@ -95,6 +95,7 @@ export default function Days() {
         </div>
 
         <div style={{width: '80%', margin: '20px auto'}}>
+        {(!selectedDay || !entries[selectedDay.toDateString()]) && 
           <form  onSubmit={handleEntrySubmit} style={{width: '80%', margin: '20px auto'}}>
             <input 
               type='text'
@@ -107,7 +108,7 @@ export default function Days() {
               Submit
             </button>
           </form>
-          
+}
           {selectedDay && entries[selectedDay.toDateString()] && 
           
           <div className="entryList">
