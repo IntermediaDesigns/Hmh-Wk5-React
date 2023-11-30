@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 import MonthYear from './monthsYears.jsx';
+import DiaryEntry from './DiaryEntry.jsx';
 
 export default function Days() {
     const [currentDate, setCurrentDate] = useState(new Date());
     const [days, setDays] = useState([]);
+    const [entries, setEntries] = useState({});
+    const [selectedDay, setSelectedDay] = useState(null);
+    
 
     // Function to generate days for the current month and year
     const generateDays = (date) => {
@@ -25,6 +29,20 @@ export default function Days() {
         generateDays(currentDate);
     }, [currentDate]);
 
+    const handleDayClick = (day) => {
+        setSelectedDay(day);
+        
+    };
+
+    
+    const handleEntrySubmit = (entry) => {
+        setEntries({
+            ...entries,
+            [selectedDay.toDateString()]: entry
+        });
+        setSelectedDay(null);
+    };
+
     return (
         <>
             <MonthYear 
@@ -38,13 +56,16 @@ export default function Days() {
                 }}
             />
 
+
+
             <div className="daysContainer" style={{width: '95%', margin: '20px auto'}}>
                 {days.map((item, index) => (
                     <div key={index}>
                         {item.days.map((day, i) => (
-                            <div className='day' key={i} >
-                                {day.getDate()}
-                            </div>
+                            <div className='day' key={i} onClick={() => handleDayClick(day)} style={selectedDay && selectedDay.toDateString() === day.toDateString() ? {backgroundColor: '#B2EBF2'} : {}}>
+                            {day.getDate()}
+                            {entries[day.toDateString()] && <span onClick={() => alert(entries[day.toDateString()])}>💌</span>}
+                        </div>
                         ))}
                     </div>
                 ))}
