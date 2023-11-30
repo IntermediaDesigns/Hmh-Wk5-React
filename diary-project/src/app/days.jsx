@@ -117,8 +117,12 @@ export default function Days() {
                 
                 <li className="eList" key={index} >
                     <span className="delete" onClick={() => handleDeleteEntry(date)} >❌</span>
-                  <div className="break">{date}: <br/><br/>{entry}</div>
                   
+                  <div>
+                  <div className="break">{date}:</div> 
+                  <div className="breakEntry">{entry}</div>
+                  </div>
+
                 </li>
               ))}
             </ul>

@@ -79,7 +79,6 @@ div {
        margin: 5px;
 }
 
-
 input {
        display: block;
        align-items: center;
@@ -113,13 +112,11 @@ input {
        font-weight: 500;
 } 
 
-
-
 .entryList{
        display: flex;
-       
        align-items: center;
-       background-color: white;
+       background-color: rgb(231, 231, 231);
+       box-shadow: 4px 3px 3px 0 rgb(0 0 0 / 0.1), 0 2px 2px -1px rgba(0, 0, 0, 0.432);
        border-radius: 5px;
        width:100%;
        
@@ -135,10 +132,14 @@ input {
 }
 
 .delete{
-       margin-right: 20px;
+       margin-right: 10px;
 } 
 
 .break{
-       margin-bottom: 20px;   
+       display: flex;
+       margin-bottom: 10px; 
+       font-weight: 700;  
 }
+
+
    
