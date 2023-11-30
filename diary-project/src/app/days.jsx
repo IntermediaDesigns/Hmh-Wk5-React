@@ -87,20 +87,21 @@ export default function Days() {
                     {item.days.map((day, i) => (
                         <div className='day' key={i} onClick={() => handleDayClick(day)} style={selectedDay && selectedDay.toDateString() === day.toDateString() ? {backgroundColor: '#B2EBF2'} : {}}>
                             {day.getDate()}
-                            {entries[day.toDateString()] && <span onClick={() => alert(entries[day.toDateString()])}>💌</span>}
+                            {entries[day.toDateString()] && <span>💌</span>}
                         </div>
                     ))}
                 </div>
             ))}
         </div>
 
-        <div className="form" style={{width: '80%', margin: '20px auto'}}>
-          <form  className='entry' onSubmit={handleEntrySubmit} style={{width: '80%', margin: '20px auto'}}>
+        <div style={{width: '80%', margin: '20px auto'}}>
+          <form  onSubmit={handleEntrySubmit} style={{width: '80%', margin: '20px auto'}}>
             <input 
               type='text'
               placeholder="Enter a diary entry..."
               value={inputText}
               onChange={handleInputChange}
+              style={{display: 'block'}}
             />
             <button className='submit' type='submit'>
               Submit
@@ -112,9 +113,11 @@ export default function Days() {
           <div className="entryList">
             <ul style={{listStyleType: 'none'}}>
               {Object.entries(entries).map(([date, entry], index) => (
-                <li key={index}>
-                  {date}: {entry}
-                  <span onClick={() => handleDeleteEntry(date)}>❌</span>
+                
+                <li className="eList" key={index} >
+                    <span className="delete" onClick={() => handleDeleteEntry(date)} >❌</span>
+                  {date}: <br/><br/>{entry}
+                  
                 </li>
               ))}
             </ul>
