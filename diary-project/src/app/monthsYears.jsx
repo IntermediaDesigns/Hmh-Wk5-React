@@ -63,7 +63,7 @@ const handleYearChange = direction => {
 };
 
   
-// two child divs, one for the month and one for the year. Each child div has two buttons for changing the month/year and a div to display the current month/year. The onClick prop of the buttons is set to call handleMonthChange or handleYearChange when clicked.
+// two buttons for changing the month/year and a div to display the current month/year. The onClick prop of the buttons is set to call handleMonthChange or handleYearChange when clicked.
   return (
     <div className='monthYearContainer'>
       <div className='mthContainer'>

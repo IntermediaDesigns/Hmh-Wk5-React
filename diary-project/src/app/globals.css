@@ -133,6 +133,7 @@ textarea {
        display: flex;
        margin-right: 10px;
        text-align: left;
+       cursor: pointer;
 } 
 
 .break{

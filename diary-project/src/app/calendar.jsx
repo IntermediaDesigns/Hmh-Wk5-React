@@ -80,10 +80,12 @@ export default function Days() {
             onMonthChange={(newMonthIndex) => {
                 const newDate = new Date(currentDate.getFullYear(), newMonthIndex, 1);
                 setCurrentDate(newDate);
+                setSelectedDay(null);
             }}
             onYearChange={(newYear) => {
                 const newDate = new Date(newYear, currentDate.getMonth(), 1);
                 setCurrentDate(newDate);
+                setSelectedDay(null); // Clears the entry list when you click the month or year buttons when it is displayed
             }}
         />
 
