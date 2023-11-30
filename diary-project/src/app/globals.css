@@ -126,9 +126,11 @@ input {
 }
  
 .eList{
+       display: flex;
        margin-top: 20px;
        width: auto;
        margin-bottom: 20px;
+       text-align: left;
        margin-right: 30px;
 }
 
@@ -136,4 +138,7 @@ input {
        margin-right: 20px;
 } 
 
-       
+.break{
+       margin-bottom: 20px;   
+}
+   
