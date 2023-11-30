@@ -134,10 +134,15 @@ textarea {
 } 
 
 .break{
-       display: flex;
+       display: block;
        margin-bottom: 10px; 
        font-weight: 700;  
 }
 
+.listEdit {
+       display: block;
+       
+
+}
 
    
