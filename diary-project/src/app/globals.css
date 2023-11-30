@@ -79,15 +79,13 @@ div {
        margin: 5px;
 }
 
-input {
+textarea {
        display: block;
        align-items: center;
-       align-content: center;
-       justify-content: center;
        border: none;
        border-radius: 10px;
-       padding: 2px 5px;
-       height: 25px;
+       padding: 3px 5px;
+       height: 100px;
        width: 100%;
        text-wrap: wrap;
        resize: vertical;
@@ -119,7 +117,7 @@ input {
        box-shadow: 4px 3px 3px 0 rgb(0 0 0 / 0.1), 0 2px 2px -1px rgba(0, 0, 0, 0.432);
        border-radius: 5px;
        width:100%;
-       
+       flex-direction: column;
 }
  
 .eList{

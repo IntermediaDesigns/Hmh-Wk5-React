@@ -1,6 +1,6 @@
 "use client";
 
-import Days from "./days.jsx";
+import Days from "./calendar.jsx";
 
 export default function Home() {
   return (

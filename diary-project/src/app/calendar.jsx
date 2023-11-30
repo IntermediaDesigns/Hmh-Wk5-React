@@ -97,13 +97,13 @@ export default function Days() {
         <div style={{width: '80%', margin: '20px auto'}}>
         {(!selectedDay || !entries[selectedDay.toDateString()]) && 
           <form  onSubmit={handleEntrySubmit} style={{width: '80%', margin: '20px auto'}}>
-            <input 
+            <textarea 
               type='text'
               placeholder="Enter a diary entry..."
               value={inputText}
               onChange={handleInputChange}
-              style={{display: 'block'}}
-            />
+              style={{display: 'block'}}>
+              </textarea> 
             <button className='submit' type='submit'>
               Submit
             </button>
